@@ -1,0 +1,12 @@
+Step 1: Install COSMOS onto your computer
+http://cosmosrb.com/docs/installation/
+
+Step 2: Start the COSMOS Launcher
+ruby Launcher
+
+Step 3: Start the Command and Telemetry Server
+
+Step 4: View individual telemetry packets in Packet Viewer
+
+Step 5: Use Command Sender to send individual commands
+
