@@ -82,8 +82,8 @@
 "config/tools/handbook_creator/templates/header.html.erb" 0x1E490C2A
 "config/tools/handbook_creator/templates/limits_groups.html.erb" 0x40FDF34C
 "config/tools/handbook_creator/templates/nav.html.erb" 0xDF65AAEA
-"config/tools/handbook_creator/templates/overview.html.erb" 0xDC4DD2B8
-"config/tools/handbook_creator/templates/pdf_cover.html.erb" 0x7AAB9A42
+"config/tools/handbook_creator/templates/overview.html.erb" 0xC44B46CC
+"config/tools/handbook_creator/templates/pdf_cover.html.erb" 0x4F79967B
 "config/tools/handbook_creator/templates/pdf_footer.html.erb" 0xF0D3EB77
 "config/tools/handbook_creator/templates/pdf_header.html.erb" 0x3020FEE1
 "config/tools/handbook_creator/templates/telemetry_packets.html.erb" 0x86F3E5E0
