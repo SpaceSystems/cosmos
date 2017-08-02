@@ -20,8 +20,8 @@
 "config/data/vswitchon.gif" 0xD747AC45
 "config/system/system.txt" 0x9CBDFA68
 "config/system/system2.txt" 0xC75EBA65
-"config/targets/CFS/cmd_tlm/cfs_cmd.txt" 0x7CFA15E0
-"config/targets/CFS/cmd_tlm/cfs_tlm.txt" 0x6F8FA030
+"config/targets/CFS/cmd_tlm/cfs_cmd.txt" 0x92134B8D
+"config/targets/CFS/cmd_tlm/cfs_tlm.txt" 0xA1468599
 "config/targets/CFS/cmd_tlm_server.txt" 0xF104213F
 "config/targets/COSMOS/cmd_tlm/cosmos_server_cmds.txt" 0xE2F62B11
 "config/targets/COSMOS/cmd_tlm/cosmos_server_tlm.txt" 0xC667CCD6

@@ -725,3 +725,57 @@ TELEMETRY CFS SC_HKTLM BIG_ENDIAN "Housekeeping Packet Structure"
   APPEND_ARRAY_ITEM RTSEXECUTINGSTATUS 16 UINT 80 "RTS executing status bit map where each uint16 represents 16 RTS numbers. Note: array index numbers and bit numbers use base zero indexing, but RTS numbers use base one indexing. Thus, the LSB (bit zero) of uint16 array index zero represents RTS number 1, and bit one of uint16 array index zero represents RTS number 2, etc. If an RTS is IDLE, then the corresponding bit is zero. If an RTS is EXECUTING, then the corresponding bit is one."
   APPEND_ARRAY_ITEM RTSDISABLEDSTATUS 16 UINT 80 "RTS disabled status bit map where each uint16 represents 16 RTS numbers. Note: array index numbers and bit numbers use base zero indexing, but RTS numbers use base one indexing. Thus, the LSB (bit zero) of uint16 array index zero represents RTS number 1, and bit one of uint16 array index zero represents RTS number 2, etc. If an RTS is ENABLED, then the corresponding bit is zero. If an RTS is DISABLED, then the corresponding bit is one."
 
+TELEMETRY CFS CI_LAB_HKTLM BIG_ENDIAN "Housekeeping Packet Structure"
+  APPEND_ID_ITEM CCSDS_STREAMID 16 UINT 0x0884 "CCSDS Packet Identification" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SEQUENCE 16 UINT "CCSDS Packet Sequence Control" BIG_ENDIAN
+  APPEND_ITEM CCSDS_LENGTH 16 UINT "CCSDS Packet Data Length" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SECONDS 32 UINT "CCSDS Telemetry Secondary Header (seconds)"
+  APPEND_ITEM CCSDS_SUBSECS 16 UINT "CCSDS Telemetry Secondary Header (subseconds)"
+  APPEND_ITEM CI_COMMAND_ERROR_COUNT 8 UINT "CI Command Error Count"
+  APPEND_ITEM CI_COMMAND_COUNT 8 UINT "CI Command Count"
+  APPEND_ITEM CI_XSUMS_ENABLED 8 UINT "CI Xsums Enabled"
+  APPEND_ITEM SOCKETCONNECTED 8 UINT "Socket Connected"
+  APPEND_ITEM FDPDUSDROPPED 8 UINT "FP PDUs Dropped"
+  APPEND_ITEM EOFPDUSDROPPED 8 UINT "EOF PDUs Dropped"
+  APPEND_ITEM FINPDUSDROPPED 8 UINT "FIN PDUs Dropped"
+  APPEND_ITEM ACKPDUSDROPPED 8 UINT "ACK PDUs Dropped"
+  APPEND_ITEM MDPDUSDROPPED 8 UINT "MD PDUs Dropped"
+  APPEND_ITEM NAKPDUSDROPPED 8 UINT "NAK PDUs Dropped"
+  APPEND_ARRAY_ITEM SPARE 8 UINT 16 "Spare"
+  APPEND_ITEM INGESTPACKETS 32 UINT "Ingest Packets"
+  APPEND_ITEM INGESTERRORS 32 UINT "Ingest Errors"
+  APPEND_ITEM PDUSCAPTURED 32 UINT "PDUs Captured"
+
+TELEMETRY CFS TO_LAB_HKTLM BIG_ENDIAN "Housekeeping Packet Structure"
+  APPEND_ID_ITEM CCSDS_STREAMID 16 UINT 0x0880 "CCSDS Packet Identification" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SEQUENCE 16 UINT "CCSDS Packet Sequence Control" BIG_ENDIAN
+  APPEND_ITEM CCSDS_LENGTH 16 UINT "CCSDS Packet Data Length" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SECONDS 32 UINT "CCSDS Telemetry Secondary Header (seconds)"
+  APPEND_ITEM CCSDS_SUBSECS 16 UINT "CCSDS Telemetry Secondary Header (subseconds)"
+  APPEND_ITEM COMMAND_COUNTER 8 UINT "Command Counter"
+  APPEND_ITEM COMMAND_ERROR_COUNTER 8 UINT "Command Error Counter"
+  APPEND_ARRAY_ITEM SPARETOALIGN 8 UINT 16 "Spare To Align"
+
+TELEMETRY CFS TO_DATA_TYPES BIG_ENDIAN "Data Types Packet Structure"
+  APPEND_ID_ITEM CCSDS_STREAMID 16 UINT 0x0881 "CCSDS Packet Identification" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SEQUENCE 16 UINT "CCSDS Packet Sequence Control" BIG_ENDIAN
+  APPEND_ITEM CCSDS_LENGTH 16 UINT "CCSDS Packet Data Length" BIG_ENDIAN
+  APPEND_ITEM CCSDS_SECONDS 32 UINT "CCSDS Telemetry Secondary Header (seconds)"
+  APPEND_ITEM CCSDS_SUBSECS 16 UINT "CCSDS Telemetry Secondary Header (subseconds)"
+  APPEND_ITEM SYNCH 16 UINT "Synch"
+  APPEND_ITEM BL1 8 UINT "boolean"
+  APPEND_ITEM BL2 8 UINT "boolean"
+  APPEND_ITEM B1 8 INT "B1"
+  APPEND_ITEM B2 8 INT "B2"
+  APPEND_ITEM B3 8 INT "B3"
+  APPEND_ITEM B4 8 INT "B4"
+  APPEND_ITEM W1 16 INT "W1"
+  APPEND_ITEM W2 16 INT "W2"
+  APPEND_ITEM DW1 32 INT "DW1"
+  APPEND_ITEM DW2 32 INT "DW2"
+  APPEND_ITEM F1 32 FLOAT "F1"
+  APPEND_ITEM F2 32 FLOAT "F2"
+  APPEND_ITEM DF1 64 FLOAT "DF1"
+  APPEND_ITEM DF2 64 FLOAT "DF2"
+  APPEND_ITEM STR 80 STRING "STR"
+
